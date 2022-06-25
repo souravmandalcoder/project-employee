@@ -1,0 +1,57 @@
+<div class="register" fxFlex="100" fxLayoutAlign="center center">
+  <form fxLayout="row wrap" fxLayoutAlign="center center">
+    <div class="login-form" fxLayout="column">
+      <h2 fxLayoutAlign="center center">Create Account</h2>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Enter Your Name</mat-label>
+        <input matInput formControlName="name" />
+      </mat-form-field>
+
+      <div class="example-container">
+        <div class="example-container">
+          <mat-form-field appearance="fill">
+            <mat-label>Enter your email</mat-label>
+            <input
+              matInput
+              placeholder="pat@example.com"
+              [formControl]="email"
+              required
+            />
+            <mat-error *ngIf="email.invalid">{{ getErrorMessage() }}</mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="example-container">
+        <mat-form-field appearance="fill">
+          <mat-label>Enter your password</mat-label>
+          <input matInput [type]="hide ? 'password' : 'text'" />
+          <button
+            mat-icon-button
+            matSuffix
+            (click)="hide = !hide"
+            [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide"
+          >
+            <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
+
+      <div class="button">
+        <div class="example-button-row">
+          <button mat-raised-button color="accent">Register</button>
+        </div>
+      </div>
+      <div class="login">
+        <label
+          >Already Have An Account?
+          <a
+            [routerLink]="['/' + 'login']"
+            routerLinkActive="router-link-active"
+            >Login Here!</a
+          ></label
+        >
+      </div>
+    </div>
+  </form>
+</div>
