@@ -115,29 +115,18 @@
       "id": 18
     }
   ],
-  "comments": [
+  "adminprojects": [
     {
       "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "name": "suraj",
+      "project": "employee-project"
     },
     {
       "id": 2,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  },
-  "roles": [
-    {
-      "roleId": 10,
-      "name": "manager"
-    },
-    {
-      "roleId": 20,
-      "name": "developer"
+      "name": "anil",
+      "project": "student-project"
     }
   ]
+  
+ 
 }

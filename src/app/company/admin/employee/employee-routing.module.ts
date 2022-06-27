@@ -1,14 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ViewempComponent } from './viewemp.component';
-import { Routes, RouterModule } from '@angular/router';
-
+import { EmployeeComponent } from './employee.component';
+import { RouterModule, Routes } from '@angular/router';
 
 
 const routes: Routes = [
   {
     path: '',
-    component: ViewempComponent
+    component: EmployeeComponent
   }
 ]
 
@@ -19,4 +18,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class ViewempRoutingModule { }
+export class EmployeeRoutingModule { }

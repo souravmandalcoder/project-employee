@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BlankLayoutComponent } from './blank-layout.component';
+import { EmployeeLayoutComponent } from './employee-layout.component';
 
-describe('BlankLayoutComponent', () => {
-  let component: BlankLayoutComponent;
-  let fixture: ComponentFixture<BlankLayoutComponent>;
+describe('EmployeeLayoutComponent', () => {
+  let component: EmployeeLayoutComponent;
+  let fixture: ComponentFixture<EmployeeLayoutComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BlankLayoutComponent ]
+      declarations: [ EmployeeLayoutComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BlankLayoutComponent);
+    fixture = TestBed.createComponent(EmployeeLayoutComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

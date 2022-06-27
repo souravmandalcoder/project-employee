@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Adminproject } from 'src/app/models/adminproject';
+import { Employee } from 'src/app/models/employee';
 import { EmployeeService } from 'src/app/services/employee/employee.service';
 
 export interface PeriodicElement {
@@ -23,27 +23,28 @@ const ELEMENT_DATA: PeriodicElement[] = [
 ];
 
 @Component({
-  selector: 'app-adminproject',
-  templateUrl: './adminproject.component.html',
-  styleUrls: ['./adminproject.component.scss']
+  selector: 'app-employee',
+  templateUrl: './employee.component.html',
+  styleUrls: ['./employee.component.scss']
 })
-export class AdminprojectComponent implements OnInit {
+export class EmployeeComponent implements OnInit {
 
-  displayedColumns: string[] = ['id', 'name', 'project'];
+  displayedColumns: string[] = ['id', 'name', 'phone', 'address', 'company', 'action'];
   dataSource: any;
-
-  adminproject: Adminproject[] = [];
+  employees: Employee[] = [];
 
   constructor(private empService: EmployeeService) { }
 
   ngOnInit(): void {
+    this.getEmployee();
   }
 
-  getAdminProject() {
-    this.empService.getAdminProject().subscribe(res => {
-      this.adminproject = res;
+  getEmployee() {
+    this.empService.getEmployee().subscribe(res => {
+      this.employees = res;
       console.log(res);
-      this.dataSource = this.adminproject;
+
+      this.dataSource = this.employees;
     })
   }
 

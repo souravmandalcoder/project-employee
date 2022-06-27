@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BlankLayoutComponent } from './layouts/blank-layout/blank-layout.component';
+import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import { EmployeeLayoutComponent } from './layouts/employee-layout/employee-layout.component';
 import { FullLayoutComponent } from './layouts/full-layout/full-layout.component';
 
 const routes: Routes = [
@@ -20,9 +21,31 @@ const routes: Routes = [
       },
     ]
   },
+
   {
     path: '',
-    component: BlankLayoutComponent,
+    component: AdminLayoutComponent,
+    children: [
+      {
+
+        path: 'employee',
+        loadChildren: () =>
+          import('./company/admin/employee/employee.module')
+            .then((x) => x.EmployeeModule)
+
+      },
+      {
+        path: 'adminproject',
+        loadChildren: () =>
+          import('./company/admin/adminproject/adminproject.module')
+            .then((x) => x.AdminprojectModule)
+      },
+
+    ]
+  },
+  {
+    path: '',
+    component: EmployeeLayoutComponent,
     children: [
       {
         path: 'employeeproject',
@@ -36,18 +59,6 @@ const routes: Routes = [
           import('./company/employee/details/details.module')
             .then((x) => x.DetailsModule)
       },
-      {
-        path: 'adminproject',
-        loadChildren: () =>
-          import('./company/admin/adminproject/adminproject.module')
-            .then((x) => x.AdminprojectModule)
-      },
-      {
-        path: 'viewemployee',
-        loadChildren: () =>
-          import('./company/admin/viewemp/viewemp.module')
-            .then((x) => x.ViewempModule)
-      }
     ]
   }
 ];

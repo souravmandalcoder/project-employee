@@ -1,0 +1,29 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2 col-sm-4 sidebar1">
+      <div class="left-navigation">
+        <ul class="list">
+          <h5><strong>Admin</strong></h5>
+
+          <li>
+            <a
+              [routerLink]="['/employee']"
+              routerLinkActive="router-link-active"
+              >View Employees
+            </a>
+          </li>
+          <li>
+            <a
+              [routerLink]="['/adminproject']"
+              routerLinkActive="router-link-active"
+              >View Projects
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-10 col-sm-8 main-content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
