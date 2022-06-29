@@ -1,141 +1,40 @@
 {
   "employees": [
     {
-      "id": 1,
-      "name": "sourav",
-      "address": "ichalka",
-      "phone": "4345",
-      "company": "netflix"
+      "name":"anil",
+      "lastname": "varma",
+      "department":"security"
     },
     {
-      "id": 2,
-      "name": "mike",
-      "address": "delhi",
-      "phone": "4345",
-      "company": "netflix"
+      "name":"rahul",
+      "lastname": "sharma",
+      "department":"cloud"
     },
     {
-      "id": 3,
-      "name": "raj",
-      "address": "ichalkaranji",
-      "phone": "83088574",
-      "company": "L&T"
-    },
-    {
-      "id": 4,
-      "name": "johnson",
-      "address": "LA",
-      "phone": "86678",
-      "company": "amazon"
-    },
-    {
-      "id": 5,
-      "name": "jefftest",
-      "address": "usa",
-      "phone": "0999",
-      "company": "amazon"
-    },
-    {
-      "id": 6,
-      "name": "bill",
-      "address": "gates",
-      "phone": "888",
-      "company": "test"
-    },
-    {
-      "id": 7,
-      "name": "rahul",
-      "address": "mumbai",
-      "phone": "777",
-      "company": "3ri"
-    },
-    {
-      "id": 8,
-      "name": "suyog",
-      "address": "new",
-      "phone": "333",
-      "company": "3ri"
-    },
-    {
-      "id": 10,
-      "name": "chetan",
-      "address": "pune",
-      "phone": "999999",
-      "company": "hsbc"
-    },
-    {
-      "id": 12,
-      "name": "sam",
-      "address": "maj",
-      "phone": "543",
-      "company": "datasc"
-    },
-    {
-      "id": 13,
-      "name": "sama",
-      "address": "majn",
-      "phone": "543ef",
-      "company": "datasce"
-    },
-    {
-      "name": "shub",
-      "address": "kolha",
-      "phone": "9878",
-      "company": "pol",
-      "id": 14
-    },
-    {
-      "name": "sourav",
-      "address": "ichal",
-      "phone": "8687",
-      "company": "jis",
-      "id": 15
-    },
-    {
-      "name": "rus",
-      "address": "uk",
-      "phone": "78678",
-      "company": "eng",
-      "id": 16
-    },
-    {
-      "name": "bill",
-      "address": "hol",
-      "phone": "564",
-      "company": "us",
-      "id": 17
-    },
-    {
-      "name": "register",
-      "company": "register",
-      "phone": "456263463",
-      "email": "register@gmail.com",
-      "password": "fdsdffsfasfaf",
-      "address": "register",
-      "id": 18
-    },
-    {
-      "firstName": "dfsfa",
-      "lastName": "dfasfas",
-      "department": "fsdfsaaf",
-      "id": 19
+      "name":"raj",
+      "lastname": "naik",
+      "department":"development"
     }
   ],
+
   "adminprojects": [
     {
       "id": 1,
       "name": "suraj",
-      "project": "employee-project"
+      "project": "employee-project",
+      "status": "completed"
     },
     {
       "id": 2,
       "name": "anil",
-      "project": "student-project"
+      "project": "student-project",
+      "status": "working"
     },
     {
       "id": 3,
       "name": "sunil",
-      "project": "ecommerce-project"
+      "project": "ecommerce-project",
+      "status":"working"
     }
   ],
 "employee-credentials":[

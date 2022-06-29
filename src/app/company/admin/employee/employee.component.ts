@@ -15,7 +15,7 @@ import { EmployeeService } from 'src/app/services/employee/employee.service';
 })
 export class EmployeeComponent implements OnInit {
 
-  displayedColumns: string[] = ['name', 'address', 'phone', 'company'];
+  displayedColumns: string[] = ['name', 'lastname', 'department'];
   dataSource: any;
   employees: Employee[] = [];
 
