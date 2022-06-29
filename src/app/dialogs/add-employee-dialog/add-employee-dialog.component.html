@@ -1,0 +1,46 @@
+<h2 mat-dialog-title>Add Employee</h2>
+<mat-dialog-content class="mat-typography">
+  <form fxLayoutAlign="stretch" fxLayout="column" class="login-form">
+    <mat-form-field>
+      <mat-label>Enter First Name </mat-label>
+      <input
+        type="text"
+        [(ngModel)]="dataArray.firstName"
+        name="firstName"
+        matInput
+        placeholder="First Name"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Enter Last Name </mat-label>
+      <input
+        type="text"
+        [(ngModel)]="dataArray.lastName"
+        name="lastName"
+        matInput
+        placeholder="Last Name"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Enter Department </mat-label>
+      <input
+        type="text"
+        [(ngModel)]="dataArray.department"
+        name="department"
+        matInput
+        placeholder="Department"
+      />
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button
+    mat-button
+    [mat-dialog-close]="true"
+    cdkFocusInitial
+    (click)="addEmployee()"
+  >
+    Add Employee
+  </button>
+</mat-dialog-actions>

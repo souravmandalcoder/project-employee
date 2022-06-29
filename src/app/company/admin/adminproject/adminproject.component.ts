@@ -29,7 +29,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class AdminprojectComponent implements OnInit {
 
-  displayedColumns: string[] = ['id', 'name', 'project'];
+  displayedColumns: string[] = ['name', 'project'];
   dataSource: any;
 
   adminproject: Adminproject[] = [];
@@ -37,13 +37,14 @@ export class AdminprojectComponent implements OnInit {
   constructor(private empService: EmployeeService) { }
 
   ngOnInit(): void {
+    this.getAdminProject()
   }
 
   getAdminProject() {
     this.empService.getAdminProject().subscribe(res => {
-      this.adminproject = res;
+
       console.log(res);
-      this.dataSource = this.adminproject;
+      this.dataSource = res;
     })
   }
 

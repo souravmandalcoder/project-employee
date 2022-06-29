@@ -113,6 +113,12 @@
       "password": "fdsdffsfasfaf",
       "address": "register",
       "id": 18
+    },
+    {
+      "firstName": "dfsfa",
+      "lastName": "dfasfas",
+      "department": "fsdfsaaf",
+      "id": 19
     }
   ],
   "adminprojects": [
@@ -125,8 +131,30 @@
       "id": 2,
       "name": "anil",
       "project": "student-project"
+    },
+    {
+      "id": 3,
+      "name": "sunil",
+      "project": "ecommerce-project"
     }
-  ]
-  
- 
+  ],
+"employee-credentials":[
+  {
+    "name":"rahul",
+    "email":"rahul@gmail.com",
+    "password":"12345"
+  },
+  {
+    "name":"rahul",
+    "email":"rahul@gmail.com",
+    "password":"12345"
+  }
+],
+"newsignup":[
+  {
+    "name":"rahul",
+    "email":"rahul@gmail.com",
+    "password":"12345"
+  }
+]
 }

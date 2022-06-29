@@ -20,8 +20,10 @@ export class EmployeeService {
     )
   }
 
+
+
   deleteEmployee(id: number): Observable<any> {
-    const url = "http://localhost:3000/employees/" + id;
+    const url = "http://localhost:3000/employees" + id;
     return this.http.delete(url).pipe(
       map(res => {
         return res
@@ -29,14 +31,23 @@ export class EmployeeService {
     )
   }
 
-  // registerEmployee(employeedata): Observable<any> {
-  //   const url = "http://localhost:3000/employees/";
-  //   return this.http.post(url, employeedata).pipe(
-  //     map(res => {
-  //       return res
-  //     })
-  //   )
-  // }
+  registerEmployee(employeedata: any): Observable<any> {
+    const url = "http://localhost:3000/employees/";
+    return this.http.post(url, employeedata).pipe(
+      map(res => {
+        return res
+      })
+    )
+  }
+
+  signUp(signupData: any): Observable<any> {
+    const url = "http://localhost:3000/newsignup";
+    return this.http.post(url, signupData).pipe(
+      map(res => {
+        return res
+      })
+    )
+  }
 
   // updateRecords(data): Observable<any> {
   //   const url = "http://localhost:3000/employees/" + data.id;

@@ -7,6 +7,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTableModule } from '@angular/material/table';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatDialogModule } from '@angular/material/dialog';
 
 const modules = [
   MatInputModule,
@@ -15,7 +16,8 @@ const modules = [
   MatIconModule,
   MatTableModule,
   MatCardModule,
-  MatToolbarModule
+  MatToolbarModule,
+  MatDialogModule
 ]
 
 @NgModule({
