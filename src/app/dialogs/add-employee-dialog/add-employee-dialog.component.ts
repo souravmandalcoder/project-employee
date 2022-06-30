@@ -14,13 +14,21 @@ export class AddEmployeeDialogComponent implements OnInit {
   constructor(private empService: EmployeeService) { }
 
   ngOnInit(): void {
-
+    this.getEmployee();
   }
 
   addEmployee() {
     console.log(this.dataArray)
     this.empService.registerEmployee(this.dataArray).subscribe(res => {
       console.log(res);
+      this.getEmployee();
+    })
+  }
+
+  getEmployee() {
+    this.empService.getEmployee().subscribe(res => {
+      console.log(res);
+
     })
   }
 
