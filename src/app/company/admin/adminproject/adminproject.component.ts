@@ -11,7 +11,7 @@ import { EmployeeService } from 'src/app/services/employee/employee.service';
 })
 export class AdminprojectComponent implements OnInit {
 
-  displayedColumns: string[] = ['name', 'project', 'status'];
+  displayedColumns: string[] = ['id', 'name', 'project', 'status'];
   dataSource: any;
 
   adminproject: Adminproject[] = [];

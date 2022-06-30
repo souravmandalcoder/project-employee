@@ -24,7 +24,7 @@ export class EmployeeService {
 
 
   deleteEmployee(id: number): Observable<any> {
-    const url = "http://localhost:3000/employees" + id;
+    const url = "http://localhost:3000/employees/" + id;
     return this.http.delete(url).pipe(
       map(res => {
         return res
