@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EmployeeProjectDetials } from 'src/app/models/employee-project-detials';
 import { EmployeeService } from 'src/app/services/employee/employee.service';
 
 @Component({
@@ -7,6 +8,8 @@ import { EmployeeService } from 'src/app/services/employee/employee.service';
   styleUrls: ['./empproject.component.scss']
 })
 export class EmpprojectComponent implements OnInit {
+
+  projects: EmployeeProjectDetials[] = [];
   dataSource: any;
   constructor(private empService: EmployeeService) { }
 
@@ -18,8 +21,8 @@ export class EmpprojectComponent implements OnInit {
     this.empService.getEmployeeProject().subscribe(res => {
 
       console.log(res);
-      this.dataSource = res;
-      console.log(this.dataSource);
+      this.projects = res;
+      console.log(this.projects);
 
     })
   }
