@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EmployeeService } from 'src/app/services/employee/employee.service';
 
 @Component({
   selector: 'app-empproject',
@@ -6,10 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./empproject.component.scss']
 })
 export class EmpprojectComponent implements OnInit {
-
-  constructor() { }
+  dataSource: any;
+  constructor(private empService: EmployeeService) { }
 
   ngOnInit(): void {
+    this.getProjectDetails();
+  }
+
+  getProjectDetails() {
+    this.empService.getEmployeeProject().subscribe(res => {
+
+      console.log(res);
+      this.dataSource = res;
+      console.log(this.dataSource);
+
+    })
   }
 
 }

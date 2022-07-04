@@ -59,8 +59,19 @@ export class EmployeeService {
     )
   }
 
+  //Get the projects details of all the employees for the admin
   getAdminProject(): Observable<any> {
     const url = "http://localhost:3000/adminprojects";
+    return this.http.get(url).pipe(
+      map(res => {
+        return res
+      })
+    )
+  }
+
+  //Get Employee Projects Details For Individual Employee
+  getEmployeeProject(): Observable<any> {
+    const url = "http://localhost:3000/projects";
     return this.http.get(url).pipe(
       map(res => {
         return res

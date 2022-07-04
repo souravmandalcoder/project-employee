@@ -5,10 +5,6 @@ import { UpdateEmployeeDialogComponent } from 'src/app/dialogs/update-employee-d
 import { Employee } from 'src/app/models/employee';
 import { EmployeeService } from 'src/app/services/employee/employee.service';
 
-
-
-
-
 @Component({
   selector: 'app-employee',
   templateUrl: './employee.component.html',

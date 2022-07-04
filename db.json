@@ -63,5 +63,19 @@
       "email": "rahul@gmail.com",
       "password": "12345"
     }
+  ],
+  "projects":[
+    {
+      "email":"rahul@gmail.com",
+      "name":"rahul",
+      "projectname":"Employee Management System",
+      "projectdetails":"Building an employee mangement system"
+    },
+    {
+      "email":"raj@gmail.com",
+      "name":"raj",
+      "projectname":"Library Management System",
+      "projectdetails":"Building an library management system"
+    }
   ]
 }
